@@ -1,0 +1,12 @@
+<div class="todos-wrapper">
+    <div class="container">
+
+        <app-todo-item [todo]="todo" *ngFor="let todo of todos" (click)="toggleTodo(todo)"></app-todo-item>
+
+        <div class="btn-container">
+            <a href="" class="btn btn-dark" routerLink="add">
+                <i class="fa-regular fa-plus"></i>Add</a>
+        </div>
+    </div>
+
+</div>

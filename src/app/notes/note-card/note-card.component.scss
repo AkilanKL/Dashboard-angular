@@ -1,0 +1,23 @@
+:host{
+    display: block;
+    margin-bottom: 15px;
+}
+.note-card{
+    background-color: rgba(#000, 0.5);
+    color: rgba(#fff, 1);
+    border-radius: 4px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.1s;
+    &:hover{
+        background-color: rgba(#000, 0.8);
+        backdrop-filter: blur(2px);
+    }
+    .note-card-title{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .note-card-content{
+        margin-top: 7px;
+    }
+}

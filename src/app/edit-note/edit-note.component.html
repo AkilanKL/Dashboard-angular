@@ -1,0 +1,21 @@
+<div class="edit-note-wrapper container has-blurred-white-bg text-start">
+    <h2>Edit Note</h2>
+    <p  *ngIf="!note">No record found</p>
+    <form #noteForm="ngForm" (ngSubmit)="editNoteSubmit()" *ngIf="note">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter note title..." name="title" [ngModel]="note.title" #titleControl="ngModel" minlength="3" required>
+            <div class="invalid-feedback d-block" *ngIf="titleControl.touched && titleControl.errors?.['required']">Pls enter some text in title field</div>
+            <div class="invalid-feedback d-block" *ngIf="titleControl.touched && titleControl.errors?.['minlength']">Minimum characters shold be atleast 3.</div>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control mt-3" [value]="note.content" placeholder="Enter note content..." name="content" [ngModel]="note.content" #contentControl="ngModel" required></textarea>
+            <div class="invalid-feedback d-block" *ngIf="contentControl.touched && contentControl.errors?.['required']">Pls enter some text in content field</div>
+        </div>
+        <div class="btns-container mt-3 d-flex">
+            <a routerLink="../../" class="btn btn-dark"> Cancel</a>
+            <button type="button" class="btn btn-dark ms-2" (click)="deleteNote()">Delete note</button>
+            <button type="submit" class="btn btn-dark ms-auto">Update note</button>
+        </div>
+        
+    </form>
+</div>

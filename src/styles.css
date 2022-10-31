@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html, body{
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+h1{
+    font-size: 48px;
+}
+
+h2{
+    font-size: 40px;
+}
+.container{
+    max-width: 850px;
+}
+
+.has-blurred-white-bg{
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+}
+
+textarea{
+    max-height: 200px !important;
+}

@@ -1,0 +1,12 @@
+<div class="app-wrapper d-flex flex-column h-100 bg-light text-center">
+  <div class="top-section flex-grow-1 d-flex flex-column justify-content-center">
+    <h1>19:00</h1>
+    <h2>1 January 2022</h2>
+  </div>
+  <div class="content-section" [@routeAnim]="prepareRouterAnim(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+  <div class="bottom-section d-flex">
+    <app-tabs class="m-auto"></app-tabs>
+  </div>
+</div>
